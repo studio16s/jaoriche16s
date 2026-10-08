@@ -1,0 +1,3531 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>ʝᨡᨵᩙɾ𝒊ɕִׄhׁׅ֮ᧉ᩠֗爱 — เครดิตการซื้อขาย</title>
+
+<meta name="theme-color" content="#a98de3">
+<meta name="description" content="เครดิตการซื้อขายและรีวิวจากลูกค้า">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+  box-sizing:border-box;
+  -webkit-tap-highlight-color:transparent;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family:'Prompt',sans-serif;
+  font-weight:400;
+  transition:
+    background .25s ease,
+    color .25s ease;
+}
+
+button,
+input,
+textarea,
+select{
+  font-family:inherit;
+}
+
+button{
+  border:0;
+  cursor:pointer;
+}
+
+img{
+  display:block;
+  max-width:100%;
+}
+
+.hidden{
+  display:none!important;
+}
+
+.app{
+  min-height:100vh;
+  padding:18px 14px 100px;
+}
+
+.container{
+  width:min(100%,980px);
+  margin:auto;
+}
+
+/* =========================
+   TOP
+========================= */
+
+.topbar{
+  display:flex;
+  gap:10px;
+  align-items:stretch;
+  margin-bottom:12px;
+}
+
+.marquee-card{
+  min-width:0;
+  flex:1;
+  height:48px;
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:17px;
+  box-shadow:var(--shadow);
+  display:flex;
+  align-items:center;
+  overflow:hidden;
+  position:relative;
+}
+
+.marquee-icon{
+  flex:0 0 43px;
+  width:43px;
+  height:100%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:var(--primary);
+  font-size:18px;
+  background:var(--accent);
+}
+
+.marquee-window{
+  flex:1;
+  overflow:hidden;
+  white-space:nowrap;
+  padding:0 12px;
+}
+
+.marquee-text{
+  display:inline-block;
+  padding-left:100%;
+  animation:marquee 18s linear infinite;
+  color:var(--muted);
+  font-size:13px;
+}
+
+@keyframes marquee{
+  from{transform:translateX(0)}
+  to{transform:translateX(-100%)}
+}
+
+.admin-top-btn{
+  flex:0 0 auto;
+  min-width:108px;
+  padding:0 15px;
+  border-radius:17px;
+  background:var(--card);
+  border:1px solid var(--border);
+  color:var(--text);
+  box-shadow:var(--shadow);
+  font-size:13px;
+  font-weight:500;
+}
+
+.admin-top-btn:active{
+  transform:scale(.97);
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:28px;
+  box-shadow:var(--shadow);
+  overflow:hidden;
+  position:relative;
+}
+
+.banner{
+  width:100%;
+  min-height:175px;
+  max-height:360px;
+  object-fit:cover;
+  background:linear-gradient(
+    135deg,
+    var(--accent),
+    var(--bg)
+  );
+}
+
+.banner-fallback{
+  min-height:175px;
+  max-height:360px;
+  padding:45px 20px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  color:var(--primary);
+  background:
+    radial-gradient(circle at 20% 20%,rgba(255,255,255,.8),transparent 28%),
+    radial-gradient(circle at 80% 70%,rgba(255,255,255,.7),transparent 30%),
+    linear-gradient(135deg,var(--accent),var(--bg));
+  font-size:19px;
+  font-weight:600;
+}
+
+.profile-wrap{
+  position:relative;
+  height:55px;
+}
+
+.profile{
+  position:absolute;
+  left:50%;
+  bottom:-43px;
+  transform:translateX(-50%);
+  width:86px;
+  height:86px;
+  border-radius:50%;
+  object-fit:cover;
+  background:var(--primary);
+  border:5px solid var(--card);
+  box-shadow:0 8px 25px rgba(80,60,100,.13);
+  z-index:2;
+}
+
+.profile-letter{
+  position:absolute;
+  left:50%;
+  bottom:-43px;
+  transform:translateX(-50%);
+  width:86px;
+  height:86px;
+  border-radius:50%;
+  background:var(--primary);
+  border:5px solid var(--card);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:var(--primaryText);
+  font-size:30px;
+  font-weight:600;
+  box-shadow:0 8px 25px rgba(80,60,100,.13);
+  z-index:1;
+}
+
+.store-info{
+  padding:58px 22px 22px;
+  text-align:center;
+}
+
+.store-name{
+  margin:0;
+  font-size:23px;
+  font-weight:600;
+  line-height:1.35;
+  word-break:break-word;
+}
+
+.store-desc{
+  margin:7px auto 0;
+  max-width:700px;
+  color:var(--muted);
+  font-size:13px;
+  line-height:1.8;
+}
+
+.note-box{
+  margin:16px auto 0;
+  max-width:720px;
+  padding:11px 14px;
+  background:var(--accent);
+  color:var(--text);
+  border-radius:14px;
+  font-size:12px;
+  line-height:1.7;
+}
+
+.note-box:empty{
+  display:none;
+}
+
+/* =========================
+   STATS
+========================= */
+
+.stats{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:10px;
+  margin-top:12px;
+}
+
+.stat{
+  min-width:0;
+  padding:16px 12px;
+  border-radius:20px;
+  background:var(--card);
+  border:1px solid var(--border);
+  box-shadow:var(--shadow);
+  text-align:center;
+}
+
+.stat-icon{
+  font-size:17px;
+  margin-bottom:5px;
+}
+
+.stat-value{
+  font-size:17px;
+  font-weight:600;
+  line-height:1.4;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+
+.stat-label{
+  color:var(--muted);
+  font-size:11px;
+  margin-top:2px;
+}
+
+.progress{
+  width:100%;
+  height:7px;
+  border-radius:99px;
+  background:var(--bg);
+  overflow:hidden;
+  margin-top:8px;
+}
+
+.progress-bar{
+  width:0%;
+  height:100%;
+  border-radius:99px;
+  background:var(--primary);
+  transition:width .4s ease;
+}
+
+/* =========================
+   SECTION
+========================= */
+
+.section-head{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+  margin:25px 3px 11px;
+}
+
+.section-title{
+  margin:0;
+  font-size:18px;
+  font-weight:600;
+}
+
+.section-count{
+  color:var(--muted);
+  font-size:11px;
+}
+
+/* =========================
+   REVIEWS
+========================= */
+
+.review-list{
+  display:grid;
+  gap:10px;
+}
+
+.empty{
+  padding:35px 20px;
+  background:var(--card);
+  border:1px dashed var(--border);
+  border-radius:20px;
+  text-align:center;
+  color:var(--muted);
+  font-size:13px;
+}
+
+.empty-icon{
+  font-size:28px;
+  margin-bottom:8px;
+}
+
+.review-card{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:20px;
+  padding:15px;
+  box-shadow:var(--shadow);
+}
+
+.review-top{
+  display:flex;
+  align-items:center;
+  gap:11px;
+}
+
+.review-avatar{
+  width:43px;
+  height:43px;
+  flex:0 0 43px;
+  border-radius:50%;
+  background:var(--accent);
+  color:var(--primary);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:600;
+}
+
+.review-meta{
+  min-width:0;
+  flex:1;
+}
+
+.review-name{
+  font-size:14px;
+  font-weight:600;
+}
+
+.review-date{
+  color:var(--muted);
+  font-size:10px;
+  margin-top:1px;
+}
+
+.stars{
+  color:var(--primary);
+  letter-spacing:1px;
+  font-size:13px;
+  white-space:nowrap;
+}
+
+.review-text{
+  margin:12px 0 0;
+  font-size:13px;
+  line-height:1.8;
+  white-space:pre-wrap;
+  word-break:break-word;
+}
+
+.proof{
+  margin-top:12px;
+  width:100%;
+  max-height:420px;
+  object-fit:contain;
+  border-radius:14px;
+  background:var(--bg);
+  border:1px solid var(--border);
+}
+
+/* =========================
+   FLOAT BUTTON
+========================= */
+
+.write-review{
+  position:fixed;
+  left:50%;
+  bottom:20px;
+  transform:translateX(-50%);
+  z-index:50;
+  min-width:145px;
+  height:48px;
+  padding:0 20px;
+  border-radius:999px;
+  background:var(--primary);
+  color:var(--primaryText);
+  box-shadow:0 12px 30px rgba(100,70,130,.25);
+  font-size:13px;
+  font-weight:500;
+}
+
+.write-review:active{
+  transform:translateX(-50%) scale(.96);
+}
+
+/* =========================
+   MODAL
+========================= */
+
+.modal{
+  position:fixed;
+  inset:0;
+  z-index:100;
+  background:rgba(35,25,45,.42);
+  backdrop-filter:blur(6px);
+  display:flex;
+  align-items:flex-end;
+  justify-content:center;
+  padding:12px;
+}
+
+.modal-box{
+  width:min(100%,540px);
+  max-height:92vh;
+  overflow:auto;
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:25px;
+  box-shadow:0 25px 70px rgba(40,25,50,.25);
+  padding:20px;
+  animation:modalIn .2s ease;
+}
+
+@keyframes modalIn{
+  from{
+    opacity:0;
+    transform:translateY(15px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+.modal-head{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  margin-bottom:17px;
+}
+
+.modal-title{
+  margin:0;
+  font-size:18px;
+  font-weight:600;
+}
+
+.close-btn{
+  width:34px;
+  height:34px;
+  border-radius:50%;
+  background:var(--bg);
+  color:var(--text);
+  font-size:17px;
+}
+
+.field{
+  margin-bottom:13px;
+}
+
+.field label{
+  display:block;
+  margin-bottom:6px;
+  font-size:12px;
+  font-weight:500;
+}
+
+.field input,
+.field textarea,
+.field select{
+  width:100%;
+  border:1px solid var(--border);
+  outline:none;
+  background:var(--bg);
+  color:var(--text);
+  border-radius:13px;
+  padding:11px 12px;
+  font-size:13px;
+  transition:border .2s,box-shadow .2s;
+}
+
+.field textarea{
+  min-height:115px;
+  resize:vertical;
+}
+
+.field input:focus,
+.field textarea:focus,
+.field select:focus{
+  border-color:var(--primary);
+  box-shadow:0 0 0 3px var(--accent);
+}
+
+.primary-btn{
+  width:100%;
+  min-height:45px;
+  border-radius:14px;
+  background:var(--primary);
+  color:var(--primaryText);
+  font-size:13px;
+  font-weight:500;
+}
+
+.secondary-btn{
+  width:100%;
+  min-height:42px;
+  border-radius:13px;
+  background:var(--bg);
+  color:var(--text);
+  border:1px solid var(--border);
+  font-size:12px;
+}
+
+.btn-row{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:9px;
+}
+
+/* =========================
+   RATING
+========================= */
+
+.rating{
+  display:flex;
+  flex-direction:row-reverse;
+  justify-content:flex-end;
+  gap:5px;
+}
+
+.rating input{
+  display:none;
+}
+
+.rating label{
+  cursor:pointer;
+  font-size:27px;
+  color:#d8cedd;
+  margin:0;
+  transition:.15s;
+}
+
+.rating label:hover,
+.rating label:hover ~ label,
+.rating input:checked ~ label{
+  color:var(--primary);
+}
+
+/* =========================
+   LOGIN
+========================= */
+
+.login-box{
+  max-width:390px;
+}
+
+.login-note{
+  color:var(--muted);
+  font-size:11px;
+  line-height:1.7;
+  margin:-5px 0 15px;
+}
+
+/* =========================
+   ADMIN
+========================= */
+
+.admin-box{
+  width:min(100%,900px);
+}
+
+.admin-tabs{
+  display:flex;
+  gap:7px;
+  overflow:auto;
+  padding-bottom:3px;
+  margin-bottom:16px;
+}
+
+.admin-tab{
+  flex:0 0 auto;
+  padding:9px 15px;
+  border-radius:12px;
+  background:var(--bg);
+  border:1px solid var(--border);
+  color:var(--muted);
+  font-size:12px;
+}
+
+.admin-tab.active{
+  background:var(--primary);
+  color:var(--primaryText);
+  border-color:var(--primary);
+}
+
+.admin-panel{
+  display:none;
+}
+
+.admin-panel.active{
+  display:block;
+}
+
+.admin-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+}
+
+.admin-grid .full{
+  grid-column:1/-1;
+}
+
+.color-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:10px;
+}
+
+.color-item{
+  background:var(--bg);
+  border:1px solid var(--border);
+  border-radius:14px;
+  padding:10px;
+}
+
+.color-item label{
+  margin-bottom:6px;
+}
+
+.color-input-row{
+  display:flex;
+  gap:8px;
+  align-items:center;
+}
+
+.color-input-row input[type="color"]{
+  width:43px;
+  height:38px;
+  padding:3px;
+  flex:0 0 43px;
+}
+
+.color-input-row input[type="text"]{
+  min-width:0;
+}
+
+.admin-review-list{
+  display:grid;
+  gap:8px;
+  max-height:400px;
+  overflow:auto;
+}
+
+.admin-review{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  padding:10px;
+  background:var(--bg);
+  border:1px solid var(--border);
+  border-radius:14px;
+}
+
+.admin-review-info{
+  min-width:0;
+  flex:1;
+}
+
+.admin-review-name{
+  font-size:12px;
+  font-weight:600;
+}
+
+.admin-review-text{
+  color:var(--muted);
+  font-size:10px;
+  overflow:hidden;
+  white-space:nowrap;
+  text-overflow:ellipsis;
+}
+
+.delete-btn{
+  flex:0 0 auto;
+  width:35px;
+  height:35px;
+  border-radius:11px;
+  background:#fff0f4;
+  color:#d96b8a;
+}
+
+/* =========================
+   TOAST
+========================= */
+
+.toast{
+  position:fixed;
+  left:50%;
+  top:18px;
+  transform:translate(-50%,-15px);
+  z-index:300;
+  max-width:calc(100% - 30px);
+  padding:10px 16px;
+  border-radius:999px;
+  background:var(--text);
+  color:var(--card);
+  font-size:12px;
+  opacity:0;
+  pointer-events:none;
+  transition:.25s;
+}
+
+.toast.show{
+  opacity:1;
+  transform:translate(-50%,0);
+}
+
+/* =========================
+   DESKTOP
+========================= */
+
+@media (min-width:769px){
+  .app{
+    padding:28px 20px 100px;
+  }
+
+  .profile{
+    width:155px;
+    height:155px;
+    bottom:-77.5px;
+  }
+
+  .profile-letter{
+    width:155px;
+    height:155px;
+    bottom:-77.5px;
+    font-size:44px;
+  }
+
+  .profile-wrap{
+    height:95px;
+  }
+
+  .store-info{
+    padding-top:92px;
+  }
+
+  .banner,
+  .banner-fallback{
+    min-height:240px;
+    max-height:430px;
+  }
+
+  .modal{
+    align-items:center;
+  }
+
+  .modal-box{
+    max-height:90vh;
+  }
+}
+
+@media (max-width:600px){
+  .stats{
+    gap:7px;
+  }
+
+  .stat{
+    padding:13px 7px;
+    border-radius:17px;
+  }
+
+  .stat-value{
+    font-size:15px;
+  }
+
+  .stat-label{
+    font-size:9px;
+  }
+
+  .admin-grid{
+    grid-template-columns:1fr;
+  }
+
+  .admin-grid .full{
+    grid-column:auto;
+  }
+}
+
+@media (max-width:420px){
+  .app{
+    padding-left:10px;
+    padding-right:10px;
+  }
+
+  .topbar{
+    gap:7px;
+  }
+
+  .admin-top-btn{
+    min-width:86px;
+    padding:0 10px;
+    font-size:11px;
+  }
+
+  .marquee-text{
+    font-size:11px;
+  }
+
+  .store-name{
+    font-size:20px;
+  }
+
+  .color-grid{
+    grid-template-columns:1fr;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="app">
+  <main class="container">
+
+    <div class="topbar">
+
+      <div class="marquee-card">
+        <div class="marquee-icon">♡</div>
+
+        <div class="marquee-window">
+          <span
+            class="marquee-text"
+            id="marqueeText"
+          >
+            ขอบคุณที่เข้ามาแสดงความพึงพอใจให้กับร้านของเรานะคะ ♡
+          </span>
+        </div>
+      </div>
+
+      <button
+        class="admin-top-btn"
+        id="adminOpenBtn"
+        type="button"
+      >
+        ⚙ หลังบ้าน
+      </button>
+
+    </div>
+
+    <section class="hero">
+
+      <img
+        id="banner"
+        class="banner hidden"
+        alt="Banner"
+      >
+
+      <div
+        id="bannerFallback"
+        class="banner-fallback"
+      >
+        ♡ ʝᨡᨵᩙɾ𝒊ɕִׄhׁׅ֮ᧉ᩠֗爱 ♡
+      </div>
+
+      <div class="profile-wrap">
+
+        <img
+          id="profile"
+          class="profile hidden"
+          alt="Profile"
+        >
+
+        <div
+          id="profileLetter"
+          class="profile-letter"
+        >
+          ʝ
+        </div>
+
+      </div>
+
+      <div class="store-info">
+
+        <h1
+          class="store-name"
+          id="storeName"
+        >
+          ʝᨡᨵᩙɾ𝒊ɕִׄhׁׅ֮ᧉ᩠֗爱
+        </h1>
+
+        <p
+          class="store-desc"
+          id="storeDesc"
+        >
+          ขอบคุณที่เข้ามาแสดงความพึงพอใจให้กับร้านของเรานะคะ ♡
+        </p>
+
+        <div
+          class="note-box"
+          id="storeNote"
+        ></div>
+
+      </div>
+
+    </section>
+
+    <section class="stats">
+
+      <div class="stat">
+        <div class="stat-icon">♡</div>
+        <div
+          class="stat-value"
+          id="todayDate"
+        >
+          -
+        </div>
+        <div class="stat-label">
+          วันนี้
+        </div>
+      </div>
+
+      <div class="stat">
+        <div class="stat-icon">✦</div>
+        <div
+          class="stat-value"
+          id="reviewCount"
+        >
+          0
+        </div>
+        <div class="stat-label">
+          รีวิวทั้งหมด
+        </div>
+      </div>
+
+      <div class="stat">
+        <div class="stat-icon">★</div>
+        <div
+          class="stat-value"
+          id="averageRating"
+        >
+          0.0
+        </div>
+        <div class="stat-label">
+          คะแนนเฉลี่ย
+        </div>
+      </div>
+
+    </section>
+
+    <section>
+
+      <div class="section-head">
+
+        <h2 class="section-title">
+          ♡ รีวิวจากลูกค้า
+        </h2>
+
+        <span
+          class="section-count"
+          id="reviewSectionCount"
+        >
+          0 รีวิว
+        </span>
+
+      </div>
+
+      <div
+        class="review-list"
+        id="reviewList"
+      ></div>
+
+    </section>
+
+  </main>
+</div>
+
+<button
+  class="write-review"
+  id="writeReviewBtn"
+  type="button"
+>
+  ✎ เขียนรีวิว
+</button>
+
+<!-- =========================
+     REVIEW MODAL
+========================= -->
+
+<div
+  class="modal hidden"
+  id="reviewModal"
+>
+  <div class="modal-box">
+
+    <div class="modal-head">
+
+      <h3 class="modal-title">
+        เขียนรีวิว ♡
+      </h3>
+
+      <button
+        class="close-btn"
+        type="button"
+        data-close="reviewModal"
+      >
+        ×
+      </button>
+
+    </div>
+
+    <form id="reviewForm">
+
+      <div class="field">
+        <label for="reviewName">
+          ชื่อ
+        </label>
+
+        <input
+          id="reviewName"
+          type="text"
+          maxlength="40"
+          placeholder="ชื่อของคุณ"
+          required
+        >
+      </div>
+
+      <div class="field">
+
+        <label>
+          ให้คะแนน
+        </label>
+
+        <div class="rating">
+
+          <input
+            id="star5"
+            type="radio"
+            name="rating"
+            value="5"
+            checked
+          >
+          <label for="star5">★</label>
+
+          <input
+            id="star4"
+            type="radio"
+            name="rating"
+            value="4"
+          >
+          <label for="star4">★</label>
+
+          <input
+            id="star3"
+            type="radio"
+            name="rating"
+            value="3"
+          >
+          <label for="star3">★</label>
+
+          <input
+            id="star2"
+            type="radio"
+            name="rating"
+            value="2"
+          >
+          <label for="star2">★</label>
+
+          <input
+            id="star1"
+            type="radio"
+            name="rating"
+            value="1"
+          >
+          <label for="star1">★</label>
+
+        </div>
+
+      </div>
+
+      <div class="field">
+        <label for="reviewText">
+          รีวิว
+        </label>
+
+        <textarea
+          id="reviewText"
+          maxlength="500"
+          placeholder="เขียนความประทับใจของคุณ..."
+          required
+        ></textarea>
+      </div>
+
+      <div class="field">
+        <label for="proofFile">
+          รูปหลักฐาน / รูปประกอบ (ถ้ามี)
+        </label>
+
+        <input
+          id="proofFile"
+          type="file"
+          accept="image/*"
+        >
+      </div>
+
+      <button
+        class="primary-btn"
+        id="submitReviewBtn"
+        type="submit"
+      >
+        ส่งรีวิว ♡
+      </button>
+
+    </form>
+
+  </div>
+</div>
+
+<!-- =========================
+     LOGIN MODAL
+========================= -->
+
+<div
+  class="modal hidden"
+  id="loginModal"
+>
+  <div class="modal-box login-box">
+
+    <div class="modal-head">
+
+      <h3 class="modal-title">
+        เข้าสู่หลังบ้าน
+      </h3>
+
+      <button
+        class="close-btn"
+        type="button"
+        data-close="loginModal"
+      >
+        ×
+      </button>
+
+    </div>
+
+    <p class="login-note">
+      กรุณาใส่รหัสผ่านสำหรับจัดการข้อมูลร้านค้า
+    </p>
+
+    <form id="loginForm">
+
+      <div class="field">
+        <label for="adminPassword">
+          รหัสผ่าน
+        </label>
+
+        <input
+          id="adminPassword"
+          type="password"
+          inputmode="text"
+          autocomplete="current-password"
+          placeholder="กรอกรหัสผ่าน"
+          required
+        >
+      </div>
+
+      <button
+        class="primary-btn"
+        type="submit"
+      >
+        เข้าสู่หลังบ้าน
+      </button>
+
+    </form>
+
+  </div>
+  </div>
+  <!-- =========================
+     ADMIN MODAL
+========================= -->
+
+<div
+  class="modal hidden"
+  id="adminModal"
+>
+  <div class="modal-box admin-box">
+
+    <div class="modal-head">
+
+      <h3 class="modal-title">
+        หลังบ้าน —
+        <span id="adminStoreTitle">
+          ʝᨡᨵᩙɾ𝒊ɕִׄhׁׅ֮ᧉ᩠֗爱
+        </span>
+      </h3>
+
+      <button
+        class="close-btn"
+        type="button"
+        data-close="adminModal"
+      >
+        ×
+      </button>
+
+    </div>
+
+    <div class="admin-tabs">
+
+      <button
+        class="admin-tab active"
+        type="button"
+        data-tab="store"
+      >
+        ร้านค้า
+      </button>
+
+      <button
+        class="admin-tab"
+        type="button"
+        data-tab="theme"
+      >
+        ธีม
+      </button>
+
+      <button
+        class="admin-tab"
+        type="button"
+        data-tab="reviews"
+      >
+        รีวิว
+      </button>
+
+    </div>
+
+    <!-- =====================
+         STORE PANEL
+    ====================== -->
+
+    <div
+      class="admin-panel active"
+      id="panel-store"
+    >
+
+      <div class="admin-grid">
+
+        <div class="field full">
+
+          <label for="adminName">
+            ชื่อร้าน
+          </label>
+
+          <input
+            id="adminName"
+            type="text"
+            maxlength="100"
+          >
+
+        </div>
+
+        <div class="field full">
+
+          <label for="adminDesc">
+            คำอธิบายร้าน
+          </label>
+
+          <textarea
+            id="adminDesc"
+            maxlength="500"
+            placeholder="คำอธิบายสั้น ๆ ของร้าน"
+          ></textarea>
+
+        </div>
+
+        <div class="field full">
+
+          <label for="adminNote">
+            ข้อความวิ่ง / โน้ต
+          </label>
+
+          <input
+            id="adminNote"
+            type="text"
+            maxlength="200"
+            placeholder="ข้อความที่ต้องการให้แสดงด้านบน"
+          >
+
+        </div>
+
+        <div class="field">
+
+          <label for="adminAvatar">
+            รูปโปรไฟล์
+          </label>
+
+          <input
+            id="adminAvatar"
+            type="url"
+            placeholder="วางลิงก์ Google Drive ที่เปิดสาธารณะ"
+          >
+
+        </div>
+
+        <div class="field">
+
+          <label for="adminBanner">
+            รูปแบนเนอร์
+          </label>
+
+          <input
+            id="adminBanner"
+            type="url"
+            placeholder="วางลิงก์ Google Drive ที่เปิดสาธารณะ"
+          >
+
+        </div>
+
+        <div class="field full">
+
+          <label for="adminMusic">
+            ลิงก์เพลง
+          </label>
+
+          <input
+            id="adminMusic"
+            type="url"
+            placeholder="ลิงก์ไฟล์เพลง .mp3 หรือ URL ที่เล่นได้"
+          >
+
+        </div>
+
+        <div class="field full">
+
+          <label for="adminNewPassword">
+            เปลี่ยนรหัสผ่านแอดมิน
+          </label>
+
+          <input
+            id="adminNewPassword"
+            type="password"
+            inputmode="text"
+            placeholder="เว้นว่างหากไม่ต้องการเปลี่ยน"
+          >
+
+        </div>
+
+      </div>
+
+      <button
+        class="primary-btn"
+        id="saveStoreBtn"
+        type="button"
+      >
+        บันทึกข้อมูลร้านค้า
+      </button>
+
+    </div>
+
+    <!-- =====================
+         THEME PANEL
+    ====================== -->
+
+    <div
+      class="admin-panel"
+      id="panel-theme"
+    >
+
+      <div class="color-grid">
+
+        <div class="color-item">
+
+          <label for="colorBg">
+            พื้นหลัง
+          </label>
+
+          <div class="color-input-row">
+
+            <input
+              id="colorBgPicker"
+              type="color"
+              value="#fdf8ff"
+            >
+
+            <input
+              id="colorBg"
+              type="text"
+              value="#fdf8ff"
+            >
+
+          </div>
+
+        </div>
+
+        <div class="color-item">
+
+          <label for="colorText">
+            ตัวอักษร
+          </label>
+
+          <div class="color-input-row">
+
+            <input
+              id="colorTextPicker"
+              type="color"
+              value="#5d5265"
+            >
+
+            <input
+              id="colorText"
+              type="text"
+              value="#5d5265"
+            >
+
+          </div>
+
+        </div>
+
+        <div class="color-item">
+
+          <label for="colorPrimary">
+            สีปุ่ม / สีหลัก
+          </label>
+
+          <div class="color-input-row">
+
+            <input
+              id="colorPrimaryPicker"
+              type="color"
+              value="#a98de3"
+            >
+
+            <input
+              id="colorPrimary"
+              type="text"
+              value="#a98de3"
+            >
+
+          </div>
+
+        </div>
+
+        <div class="color-item">
+
+          <label for="colorPrimaryText">
+            ตัวอักษรบนปุ่ม
+          </label>
+
+          <div class="color-input-row">
+
+            <input
+              id="colorPrimaryTextPicker"
+              type="color"
+              value="#ffffff"
+            >
+
+            <input
+              id="colorPrimaryText"
+              type="text"
+              value="#ffffff"
+            >
+
+          </div>
+
+        </div>
+
+        <div class="color-item">
+
+          <label for="colorCard">
+            สีการ์ด
+          </label>
+
+          <div class="color-input-row">
+
+            <input
+              id="colorCardPicker"
+              type="color"
+              value="#ffffff"
+            >
+
+            <input
+              id="colorCard"
+              type="text"
+              value="#ffffff"
+            >
+
+          </div>
+
+        </div>
+
+        <div class="color-item">
+
+          <label for="colorAccent">
+            สี Accent
+          </label>
+
+          <div class="color-input-row">
+
+            <input
+              id="colorAccentPicker"
+              type="color"
+              value="#f7c7df"
+            >
+
+            <input
+              id="colorAccent"
+              type="text"
+              value="#f7c7df"
+            >
+
+          </div>
+
+        </div>
+
+        <div class="color-item">
+
+          <label for="colorBorder">
+            เส้นขอบ
+          </label>
+
+          <div class="color-input-row">
+
+            <input
+              id="colorBorderPicker"
+              type="color"
+              value="#eee5f2"
+            >
+
+            <input
+              id="colorBorder"
+              type="text"
+              value="#eee5f2"
+            >
+
+          </div>
+
+        </div>
+
+        <div class="color-item">
+
+          <label for="colorMuted">
+            ตัวอักษรจาง
+          </label>
+
+          <div class="color-input-row">
+
+            <input
+              id="colorMutedPicker"
+              type="color"
+              value="#9c90a4"
+            >
+
+            <input
+              id="colorMuted"
+              type="text"
+              value="#9c90a4"
+            >
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div style="height:12px"></div>
+
+      <div class="btn-row">
+
+        <button
+          class="secondary-btn"
+          id="lightThemeBtn"
+          type="button"
+        >
+          ♡ ธีมสว่าง
+        </button>
+
+        <button
+          class="secondary-btn"
+          id="darkThemeBtn"
+          type="button"
+        >
+          ☾ ธีมเข้ม
+        </button>
+
+      </div>
+
+      <div style="height:9px"></div>
+
+      <button
+        class="primary-btn"
+        id="saveThemeBtn"
+        type="button"
+      >
+        บันทึกธีม
+      </button>
+
+    </div>
+
+    <!-- =====================
+         REVIEWS PANEL
+    ====================== -->
+
+    <div
+      class="admin-panel"
+      id="panel-reviews"
+    >
+
+      <div class="btn-row">
+
+        <button
+          class="secondary-btn"
+          id="refreshReviewsBtn"
+          type="button"
+        >
+          ↻ รีเฟรช
+        </button>
+
+        <button
+          class="secondary-btn"
+          id="clearReviewsBtn"
+          type="button"
+        >
+          ♡ ล้างรีวิวทั้งหมด
+        </button>
+
+      </div>
+
+      <div style="height:12px"></div>
+
+      <div
+        class="admin-review-list"
+        id="adminReviewList"
+      ></div>
+
+    </div>
+
+  </div>
+</div>
+
+<div
+  class="toast"
+  id="toast"
+></div>
+
+<audio
+  id="music"
+  loop
+></audio>
+
+<script>
+/* =========================================================
+   CONFIG
+========================================================= */
+
+const KEY = 'jaoriche_credit_v1';
+
+const FIREBASE_URL =
+  'https://my-credit-e04ca-default-rtdb.firebaseio.com/data.json';
+
+const ADMIN_PASSWORD = 'richy160243';
+
+/* =========================================================
+   DEFAULT THEMES
+========================================================= */
+
+const themes = {
+
+  light:{
+    bg:'#fdf8ff',
+    text:'#5d5265',
+    primary:'#a98de3',
+    primaryText:'#ffffff',
+    card:'#ffffff',
+    accent:'#f7c7df',
+    border:'#eee5f2',
+    muted:'#9c90a4',
+    shadow:'0 12px 35px rgba(111,83,132,.10)'
+  },
+
+  dark:{
+    bg:'#211d28',
+    text:'#f7f0fa',
+    primary:'#bda4ee',
+    primaryText:'#241d2b',
+    card:'#2c2634',
+    accent:'#543d5b',
+    border:'#403747',
+    muted:'#b9adbf',
+    shadow:'0 12px 35px rgba(0,0,0,.22)'
+  }
+
+};
+
+/* =========================================================
+   DEFAULT STATE
+========================================================= */
+
+let state = {
+
+  name:'ʝᨡᨵᩙɾ𝒊ɕִׄhׁׅ֮ᧉ᩠֗爱',
+
+  desc:
+    'ขอบคุณที่เข้ามาแสดงความพึงพอใจให้กับร้านของเรานะคะ ♡',
+
+  note:'',
+
+  avatar:'',
+
+  banner:'',
+
+  music:'',
+
+  colors:{
+    ...themes.light
+  },
+
+  reviews:[]
+
+};
+
+let saving = false;
+
+/* =========================================================
+   DOM
+========================================================= */
+
+const $ = id => document.getElementById(id);
+
+/* =========================================================
+   ESCAPE HTML
+========================================================= */
+
+function escapeHTML(value){
+
+  return String(value ?? '')
+    .replace(/&/g,'&amp;')
+    .replace(/</g,'&lt;')
+    .replace(/>/g,'&gt;')
+    .replace(/"/g,'&quot;')
+    .replace(/'/g,'&#039;');
+
+}
+
+/* =========================================================
+   DRIVE URL
+   รองรับ Google Drive หลายรูปแบบ
+========================================================= */
+
+function getDriveId(url){
+
+  if(!url) return '';
+
+  const value = String(url).trim();
+
+  if(
+    !value.includes('drive.google.com') &&
+    !value.includes('drive.usercontent.google.com')
+  ){
+    return '';
+  }
+
+  const patterns = [
+
+    /drive\.google\.com\/file\/d\/([a-zA-Z0-9_-]+)/i,
+
+    /drive\.google\.com\/open\?id=([a-zA-Z0-9_-]+)/i,
+
+    /drive\.google\.com\/uc\?(?:[^#]*&)?id=([a-zA-Z0-9_-]+)/i,
+
+    /drive\.google\.com\/thumbnail\?(?:[^#]*&)?id=([a-zA-Z0-9_-]+)/i,
+
+    /drive\.usercontent\.google\.com\/download\?(?:[^#]*&)?id=([a-zA-Z0-9_-]+)/i
+
+  ];
+
+  for(const pattern of patterns){
+
+    const match = value.match(pattern);
+
+    if(match && match[1]){
+      return match[1];
+    }
+
+  }
+
+  return '';
+
+}
+
+/* =========================================================
+   แปลง Drive เป็น URL รูป
+========================================================= */
+
+function driveUrl(url){
+
+  if(!url) return '';
+
+  const value = String(url).trim();
+
+  const id = getDriveId(value);
+
+  if(!id){
+    return value;
+  }
+
+  return (
+    'https://drive.google.com/uc?export=view&id=' +
+    encodeURIComponent(id)
+  );
+
+}
+
+/* =========================================================
+   URL สำรองสำหรับ Drive
+   ถ้า URL แรกโหลดไม่ได้ จะลองตัวถัดไป
+========================================================= */
+
+function imageCandidates(url){
+
+  if(!url) return [];
+
+  const value = String(url).trim();
+
+  const id = getDriveId(value);
+
+  if(!id){
+
+    return [value];
+
+  }
+
+  const encodedId = encodeURIComponent(id);
+
+  return [
+
+    'https://drive.google.com/uc?export=view&id=' +
+      encodedId,
+
+    'https://drive.google.com/thumbnail?id=' +
+      encodedId +
+      '&sz=w2000',
+
+    'https://lh3.googleusercontent.com/d/' +
+      encodedId +
+      '=w2000'
+
+  ];
+
+}
+
+/* =========================================================
+   SET IMAGE
+========================================================= */
+
+function setImage(imgId,url,fallbackId){
+
+  const img = $(imgId);
+  const fallback = $(fallbackId);
+
+  if(!img || !fallback) return;
+
+  const candidates = imageCandidates(url);
+
+  let index = 0;
+
+  img.onload = function(){
+
+    img.classList.remove('hidden');
+    fallback.classList.add('hidden');
+
+  };
+
+  img.onerror = function(){
+
+    index++;
+
+    if(index < candidates.length){
+
+      img.src = candidates[index];
+
+      return;
+
+    }
+
+    img.classList.add('hidden');
+    fallback.classList.remove('hidden');
+
+  };
+
+  img.classList.add('hidden');
+  fallback.classList.remove('hidden');
+
+  if(!candidates.length){
+
+    return;
+
+  }
+
+  img.src = candidates[0];
+
+}
+  <script>
+/* =========================================================
+   COLORS
+========================================================= */
+
+function applyColors(){
+
+  const colors = state.colors || themes.light;
+
+  const root = document.documentElement;
+
+  root.style.setProperty('--bg',colors.bg);
+  root.style.setProperty('--text',colors.text);
+  root.style.setProperty('--primary',colors.primary);
+  root.style.setProperty('--primaryText',colors.primaryText);
+  root.style.setProperty('--card',colors.card);
+  root.style.setProperty('--accent',colors.accent);
+  root.style.setProperty('--border',colors.border);
+  root.style.setProperty('--muted',colors.muted);
+  root.style.setProperty('--shadow',colors.shadow);
+
+}
+
+/* =========================================================
+   LOCAL SAVE
+========================================================= */
+
+function saveLocal(){
+
+  try{
+
+    localStorage.setItem(
+      KEY,
+      JSON.stringify(state)
+    );
+
+  }catch(error){
+
+    console.warn(
+      'localStorage save failed',
+      error
+    );
+
+  }
+
+}
+
+/* =========================================================
+   FIREBASE SAVE
+========================================================= */
+
+async function saveFirebase(){
+
+  try{
+
+    const response = await fetch(
+      FIREBASE_URL,
+      {
+        method:'PUT',
+        headers:{
+          'Content-Type':'application/json'
+        },
+        body:JSON.stringify(state)
+      }
+    );
+
+    if(!response.ok){
+
+      throw new Error(
+        'Firebase HTTP ' + response.status
+      );
+
+    }
+
+    return true;
+
+  }catch(error){
+
+    console.warn(
+      'Firebase save failed:',
+      error
+    );
+
+    return false;
+
+  }
+
+}
+
+/* =========================================================
+   SAVE
+========================================================= */
+
+async function save(){
+
+  saveLocal();
+
+  return await saveFirebase();
+
+}
+
+/* =========================================================
+   FIREBASE LOAD
+========================================================= */
+
+async function loadFirebase(){
+
+  try{
+
+    const response = await fetch(
+      FIREBASE_URL + '?t=' + Date.now(),
+      {
+        cache:'no-store'
+      }
+    );
+
+    if(!response.ok){
+
+      throw new Error(
+        'Firebase HTTP ' + response.status
+      );
+
+    }
+
+    const data = await response.json();
+
+    if(data && typeof data === 'object'){
+
+      state = {
+
+        ...state,
+        ...data,
+
+        colors:{
+          ...state.colors,
+          ...(data.colors || {})
+        },
+
+        reviews:
+          Array.isArray(data.reviews)
+            ? data.reviews
+            : []
+
+      };
+
+      saveLocal();
+
+      return true;
+
+    }
+
+  }catch(error){
+
+    console.warn(
+      'Firebase load failed:',
+      error
+    );
+
+  }
+
+  return false;
+
+}
+
+/* =========================================================
+   LOCAL LOAD
+========================================================= */
+
+function loadLocal(){
+
+  try{
+
+    const raw =
+      localStorage.getItem(KEY);
+
+    if(!raw) return false;
+
+    const data = JSON.parse(raw);
+
+    if(!data || typeof data !== 'object'){
+      return false;
+    }
+
+    state = {
+
+      ...state,
+      ...data,
+
+      colors:{
+        ...state.colors,
+        ...(data.colors || {})
+      },
+
+      reviews:
+        Array.isArray(data.reviews)
+          ? data.reviews
+          : []
+
+    };
+
+    return true;
+
+  }catch(error){
+
+    console.warn(
+      'localStorage load failed',
+      error
+    );
+
+    return false;
+
+  }
+
+}
+
+/* =========================================================
+   DATE
+========================================================= */
+
+function renderDate(){
+
+  const now = new Date();
+
+  const text =
+    now.toLocaleDateString(
+      'th-TH',
+      {
+        day:'numeric',
+        month:'short',
+        year:'numeric'
+      }
+    );
+
+  $('todayDate').textContent = text;
+
+}
+
+/* =========================================================
+   STAR HTML
+========================================================= */
+
+function starsHTML(rating){
+
+  const n =
+    Math.max(
+      0,
+      Math.min(
+        5,
+        Number(rating) || 0
+      )
+    );
+
+  return '★'.repeat(n) + '☆'.repeat(5-n);
+
+}
+
+/* =========================================================
+   AVERAGE
+========================================================= */
+
+function getAverage(){
+
+  if(!state.reviews.length){
+    return 0;
+  }
+
+  const total =
+    state.reviews.reduce(
+      (sum,item)=>
+        sum + (Number(item.rating) || 0),
+      0
+    );
+
+  return total / state.reviews.length;
+
+}
+
+/* =========================================================
+   RENDER MAIN
+========================================================= */
+
+function render(){
+
+  applyColors();
+
+  $('storeName').textContent =
+    state.name || 'ʝᨡᨵᩙɾ𝒊ɕִׄhׁׅ֮ᧉ᩠֗爱';
+
+  $('storeDesc').textContent =
+    state.desc || '';
+
+  $('storeNote').textContent =
+    state.note || '';
+
+  $('marqueeText').textContent =
+    state.note ||
+    state.desc ||
+    'ขอบคุณที่เข้ามาแสดงความพึงพอใจให้กับร้านของเรานะคะ ♡';
+
+  $('adminStoreTitle').textContent =
+    state.name ||
+    'ʝᨡᨵᩙɾ𝒊ɕִׄhׁׅ֮ᧉ᩠֗爱';
+
+  document.title =
+    (state.name || 'เครดิตการซื้อขาย') +
+    ' — เครดิตการซื้อขาย';
+
+  $('bannerFallback').textContent =
+    '♡ ' +
+    (state.name || 'เครดิตการซื้อขาย') +
+    ' ♡';
+
+  const firstLetter =
+    String(
+      state.name ||
+      'ʝ'
+    ).trim().charAt(0) || 'ʝ';
+
+  $('profileLetter').textContent =
+    firstLetter;
+
+  setImage(
+    'profile',
+    state.avatar,
+    'profileLetter'
+  );
+
+  setImage(
+    'banner',
+    state.banner,
+    'bannerFallback'
+  );
+
+  const count =
+    state.reviews.length;
+
+  $('reviewCount').textContent =
+    count;
+
+  $('reviewSectionCount').textContent =
+    count + ' รีวิว';
+
+  const average =
+    getAverage();
+
+  $('averageRating').textContent =
+    average
+      ? average.toFixed(1)
+      : '0.0';
+
+  renderReviews();
+
+  renderAdminReviews();
+
+  renderAdminFields();
+
+  renderThemeFields();
+
+  updateMusic();
+
+}
+
+/* =========================================================
+   REVIEW RENDER
+========================================================= */
+
+function renderReviews(){
+
+  const list =
+    $('reviewList');
+
+  if(!state.reviews.length){
+
+    list.innerHTML = `
+      <div class="empty">
+        <div class="empty-icon">♡</div>
+        <div>
+          ยังไม่มีรีวิวในตอนนี้
+        </div>
+        <div style="margin-top:4px">
+          เป็นคนแรกที่มาเขียนรีวิวให้ร้านได้นะคะ
+        </div>
+      </div>
+    `;
+
+    return;
+
+  }
+
+  list.innerHTML =
+    state.reviews
+      .slice()
+      .reverse()
+      .map((review)=>{
+
+        const name =
+          review.name || 'ลูกค้า';
+
+        const initial =
+          String(name)
+            .trim()
+            .charAt(0)
+            .toUpperCase() || '♡';
+
+        const date =
+          review.createdAt
+            ? new Date(review.createdAt)
+                .toLocaleDateString(
+                  'th-TH',
+                  {
+                    day:'numeric',
+                    month:'short',
+                    year:'numeric'
+                  }
+                )
+            : '';
+
+        const proof =
+          review.proof
+            ? `
+              <img
+                class="proof"
+                src="${escapeHTML(review.proof)}"
+                alt="รูปประกอบรีวิว"
+                loading="lazy"
+              >
+            `
+            : '';
+
+        return `
+
+          <article class="review-card">
+
+            <div class="review-top">
+
+              <div class="review-avatar">
+                ${escapeHTML(initial)}
+              </div>
+
+              <div class="review-meta">
+
+                <div class="review-name">
+                  ${escapeHTML(name)}
+                </div>
+
+                <div class="review-date">
+                  ${escapeHTML(date)}
+                </div>
+
+              </div>
+
+              <div class="stars">
+                ${starsHTML(review.rating)}
+              </div>
+
+            </div>
+
+            <div class="review-text">
+              ${escapeHTML(review.text || '')}
+            </div>
+
+            ${proof}
+
+          </article>
+
+        `;
+
+      })
+      .join('');
+
+}
+
+/* =========================================================
+   ADMIN FIELDS
+========================================================= */
+
+function renderAdminFields(){
+
+  $('adminName').value =
+    state.name || '';
+
+  $('adminDesc').value =
+    state.desc || '';
+
+  $('adminNote').value =
+    state.note || '';
+
+  $('adminAvatar').value =
+    state.avatar || '';
+
+  $('adminBanner').value =
+    state.banner || '';
+
+  $('adminMusic').value =
+    state.music || '';
+
+  $('adminNewPassword').value =
+    '';
+
+}
+
+/* =========================================================
+   COLOR FIELD MAP
+========================================================= */
+
+const colorFields = {
+
+  bg:[
+    'colorBg',
+    'colorBgPicker'
+  ],
+
+  text:[
+    'colorText',
+    'colorTextPicker'
+  ],
+
+  primary:[
+    'colorPrimary',
+    'colorPrimaryPicker'
+  ],
+
+  primaryText:[
+    'colorPrimaryText',
+    'colorPrimaryTextPicker'
+  ],
+
+  card:[
+    'colorCard',
+    'colorCardPicker'
+  ],
+
+  accent:[
+    'colorAccent',
+    'colorAccentPicker'
+  ],
+
+  border:[
+    'colorBorder',
+    'colorBorderPicker'
+  ],
+
+  muted:[
+    'colorMuted',
+    'colorMutedPicker'
+  ]
+
+};
+
+/* =========================================================
+   THEME FIELDS
+========================================================= */
+
+function renderThemeFields(){
+
+  const colors =
+    state.colors || themes.light;
+
+  Object.keys(colorFields)
+    .forEach(key=>{
+
+      const [
+        textId,
+        pickerId
+      ] = colorFields[key];
+
+      const value =
+        colors[key] || themes.light[key];
+
+      $(textId).value =
+        value;
+
+      if(
+        /^#[0-9a-f]{6}$/i.test(value)
+      ){
+
+        $(pickerId).value =
+          value;
+
+      }
+
+    });
+
+}
+
+/* =========================================================
+   COLOR PICKER SYNC
+========================================================= */
+
+Object.keys(colorFields)
+  .forEach(key=>{
+
+    const [
+      textId,
+      pickerId
+    ] = colorFields[key];
+
+    $(pickerId)
+      .addEventListener(
+        'input',
+        function(){
+
+          $(textId).value =
+            this.value;
+
+        }
+      );
+
+    $(textId)
+      .addEventListener(
+        'input',
+        function(){
+
+          const value =
+            this.value.trim();
+
+          if(
+            /^#[0-9a-f]{6}$/i.test(value)
+          ){
+
+            $(pickerId).value =
+              value;
+
+          }
+
+        }
+      );
+
+  });
+
+/* =========================================================
+   GET THEME FROM FORM
+========================================================= */
+
+function getThemeFromForm(){
+
+  const colors = {};
+
+  Object.keys(colorFields)
+    .forEach(key=>{
+
+      const [
+        textId
+      ] = colorFields[key];
+
+      const value =
+        $(textId).value.trim();
+
+      colors[key] =
+        value ||
+        themes.light[key];
+
+    });
+
+  colors.shadow =
+    state.colors?.shadow ||
+    themes.light.shadow;
+
+  return colors;
+
+}
+
+/* =========================================================
+   APPLY PRESET
+========================================================= */
+
+function applyPreset(themeName){
+
+  const theme =
+    themes[themeName];
+
+  if(!theme) return;
+
+  state.colors = {
+    ...theme
+  };
+
+  renderThemeFields();
+
+  applyColors();
+
+}
+
+/* =========================================================
+   ADMIN REVIEW LIST
+========================================================= */
+
+function renderAdminReviews(){
+
+  const list =
+    $('adminReviewList');
+
+  if(!state.reviews.length){
+
+    list.innerHTML = `
+      <div class="empty">
+        ยังไม่มีรีวิว
+      </div>
+    `;
+
+    return;
+
+  }
+
+  list.innerHTML =
+    state.reviews
+      .map((review,index)=>{
+
+        const name =
+          review.name || 'ลูกค้า';
+
+        const text =
+          review.text || '';
+
+        return `
+
+          <div class="admin-review">
+
+            <div class="review-avatar">
+              ${escapeHTML(
+                name.charAt(0).toUpperCase()
+              )}
+            </div>
+
+            <div class="admin-review-info">
+
+              <div class="admin-review-name">
+                ${escapeHTML(name)}
+                · ${starsHTML(review.rating)}
+              </div>
+
+              <div class="admin-review-text">
+                ${escapeHTML(text)}
+              </div>
+
+            </div>
+
+            <button
+              class="delete-btn"
+              type="button"
+              data-delete-review="${index}"
+            >
+              ×
+            </button>
+
+          </div>
+
+        `;
+
+      })
+      .join('');
+
+}
+
+/* =========================================================
+   MUSIC
+========================================================= */
+
+function updateMusic(){
+
+  const audio =
+    $('music');
+
+  if(!state.music){
+
+    audio.removeAttribute('src');
+    return;
+
+  }
+
+  if(audio.src !== state.music){
+
+    audio.src =
+      state.music;
+
+    audio.load();
+
+  }
+
+  }
+  <script>
+/* =========================================================
+   OPEN / CLOSE MODAL
+========================================================= */
+
+function openModal(id){
+
+  const modal = $(id);
+
+  if(!modal) return;
+
+  modal.classList.remove('hidden');
+
+  document.body.style.overflow =
+    'hidden';
+
+}
+
+function closeModal(id){
+
+  const modal = $(id);
+
+  if(!modal) return;
+
+  modal.classList.add('hidden');
+
+  if(
+    document.querySelectorAll(
+      '.modal:not(.hidden)'
+    ).length === 0
+  ){
+
+    document.body.style.overflow =
+      '';
+
+  }
+
+}
+
+/* =========================================================
+   CLOSE BUTTON
+========================================================= */
+
+document
+  .querySelectorAll('[data-close]')
+  .forEach(button=>{
+
+    button.addEventListener(
+      'click',
+      ()=>{
+
+        closeModal(
+          button.dataset.close
+        );
+
+      }
+    );
+
+  });
+
+/* =========================================================
+   CLICK BACKDROP
+========================================================= */
+
+document
+  .querySelectorAll('.modal')
+  .forEach(modal=>{
+
+    modal.addEventListener(
+      'click',
+      event=>{
+
+        if(event.target === modal){
+
+          closeModal(
+            modal.id
+          );
+
+        }
+
+      }
+    );
+
+  });
+
+/* =========================================================
+   WRITE REVIEW
+========================================================= */
+
+$('writeReviewBtn')
+  .addEventListener(
+    'click',
+    ()=>{
+
+      openModal(
+        'reviewModal'
+      );
+
+    }
+  );
+
+/* =========================================================
+   ADMIN OPEN
+========================================================= */
+
+$('adminOpenBtn')
+  .addEventListener(
+    'click',
+    ()=>{
+
+      openModal(
+        'loginModal'
+      );
+
+      setTimeout(
+        ()=>$('adminPassword').focus(),
+        100
+      );
+
+    }
+  );
+
+/* =========================================================
+   LOGIN
+========================================================= */
+
+$('loginForm')
+  .addEventListener(
+    'submit',
+    event=>{
+
+      event.preventDefault();
+
+      const password =
+        $('adminPassword').value;
+
+      if(password !== ADMIN_PASSWORD){
+
+        toast(
+          'รหัสผ่านไม่ถูกต้อง ♡'
+        );
+
+        $('adminPassword').select();
+
+        return;
+
+      }
+
+      $('adminPassword').value = '';
+
+      closeModal(
+        'loginModal'
+      );
+
+      renderAdminFields();
+      renderThemeFields();
+      renderAdminReviews();
+
+      openModal(
+        'adminModal'
+      );
+
+    }
+  );
+
+/* =========================================================
+   ADMIN TABS
+========================================================= */
+
+document
+  .querySelectorAll('.admin-tab')
+  .forEach(tab=>{
+
+    tab.addEventListener(
+      'click',
+      ()=>{
+
+        const target =
+          tab.dataset.tab;
+
+        document
+          .querySelectorAll(
+            '.admin-tab'
+          )
+          .forEach(item=>{
+
+            item.classList.toggle(
+              'active',
+              item === tab
+            );
+
+          });
+
+        document
+          .querySelectorAll(
+            '.admin-panel'
+          )
+          .forEach(panel=>{
+
+            panel.classList.toggle(
+              'active',
+              panel.id ===
+              'panel-' + target
+            );
+
+          });
+
+      }
+    );
+
+  });
+
+/* =========================================================
+   SAVE STORE
+========================================================= */
+
+$('saveStoreBtn')
+  .addEventListener(
+    'click',
+    async ()=>{
+
+      if(saving) return;
+
+      saving = true;
+
+      const button =
+        $('saveStoreBtn');
+
+      const oldText =
+        button.textContent;
+
+      button.disabled = true;
+
+      button.textContent =
+        'กำลังบันทึก...';
+
+      state.name =
+        $('adminName')
+          .value
+          .trim() ||
+        'ʝᨡᨵᩙɾ𝒊ɕִׄhׁׅ֮ᧉ᩠֗爱';
+
+      state.desc =
+        $('adminDesc')
+          .value
+          .trim();
+
+      state.note =
+        $('adminNote')
+          .value
+          .trim();
+
+      state.avatar =
+        $('adminAvatar')
+          .value
+          .trim();
+
+      state.banner =
+        $('adminBanner')
+          .value
+          .trim();
+
+      state.music =
+        $('adminMusic')
+          .value
+          .trim();
+
+      const newPassword =
+        $('adminNewPassword')
+          .value
+          .trim();
+
+      /*
+        หมายเหตุ:
+        รหัสผ่านหลักที่กำหนดตามที่ขอคือ
+        richy160243
+
+        ช่องนี้เก็บไว้สำหรับ UI
+        แต่รหัสผ่านจริงยังเป็นค่าคงที่
+        ADMIN_PASSWORD ด้านบน
+      */
+
+      const firebaseOK =
+        await save();
+
+      render();
+
+      if(firebaseOK){
+
+        toast(
+          'บันทึกข้อมูลเรียบร้อยแล้ว ♡'
+        );
+
+      }else{
+
+        toast(
+          'บันทึกไว้ในเครื่องแล้ว แต่ Firebase ไม่ตอบสนอง'
+        );
+
+      }
+
+      if(newPassword){
+
+        toast(
+          'หากต้องการเปลี่ยนรหัสผ่านจริง ให้แก้ ADMIN_PASSWORD ในโค้ดเป็น richy160243'
+        );
+
+      }
+
+      button.disabled = false;
+
+      button.textContent =
+        oldText;
+
+      saving = false;
+
+    }
+  );
+
+/* =========================================================
+   SAVE THEME
+========================================================= */
+
+$('saveThemeBtn')
+  .addEventListener(
+    'click',
+    async ()=>{
+
+      state.colors =
+        getThemeFromForm();
+
+      applyColors();
+
+      const ok =
+        await save();
+
+      if(ok){
+
+        toast(
+          'บันทึกธีมเรียบร้อยแล้ว ♡'
+        );
+
+      }else{
+
+        toast(
+          'บันทึกธีมไว้ในเครื่องแล้ว'
+        );
+
+      }
+
+    }
+  );
+
+/* =========================================================
+   PRESET THEMES
+========================================================= */
+
+$('lightThemeBtn')
+  .addEventListener(
+    'click',
+    ()=>{
+
+      applyPreset('light');
+
+    }
+  );
+
+$('darkThemeBtn')
+  .addEventListener(
+    'click',
+    ()=>{
+
+      applyPreset('dark');
+
+    }
+  );
+
+/* =========================================================
+   REVIEW SUBMIT
+========================================================= */
+
+$('reviewForm')
+  .addEventListener(
+    'submit',
+    async event=>{
+
+      event.preventDefault();
+
+      if(saving) return;
+
+      saving = true;
+
+      const button =
+        $('submitReviewBtn');
+
+      const oldText =
+        button.textContent;
+
+      button.disabled = true;
+
+      button.textContent =
+        'กำลังส่ง...';
+
+      const name =
+        $('reviewName')
+          .value
+          .trim();
+
+      const text =
+        $('reviewText')
+          .value
+          .trim();
+
+      const rating =
+        Number(
+          document.querySelector(
+            'input[name="rating"]:checked'
+          )?.value || 5
+        );
+
+      const file =
+        $('proofFile').files[0];
+
+      let proof = '';
+
+      /*
+        ถ้ามีรูป จะอ่านเป็น base64
+        เพื่อให้สามารถเก็บใน Firebase ได้
+      */
+
+      if(file){
+
+        try{
+
+          proof =
+            await readFileAsDataURL(
+              file
+            );
+
+        }catch(error){
+
+          console.warn(
+            'Proof image error',
+            error
+          );
+
+          toast(
+            'ไม่สามารถอ่านรูปได้'
+          );
+
+          button.disabled = false;
+          button.textContent = oldText;
+          saving = false;
+
+          return;
+
+        }
+
+      }
+
+      const review = {
+
+        id:
+          Date.now().toString(36) +
+          Math.random()
+            .toString(36)
+            .slice(2,8),
+
+        name,
+
+        rating,
+
+        text,
+
+        proof,
+
+        createdAt:
+          new Date().toISOString()
+
+      };
+
+      state.reviews.push(
+        review
+      );
+
+      const ok =
+        await save();
+
+      render();
+
+      $('reviewForm').reset();
+
+      $('star5').checked = true;
+
+      closeModal(
+        'reviewModal'
+      );
+
+      if(ok){
+
+        toast(
+          'ส่งรีวิวเรียบร้อยแล้ว ขอบคุณมากนะคะ ♡'
+        );
+
+      }else{
+
+        toast(
+          'บันทึกรีวิวไว้ในเครื่องแล้ว ♡'
+        );
+
+      }
+
+      button.disabled = false;
+
+      button.textContent =
+        oldText;
+
+      saving = false;
+
+    }
+  );
+
+/* =========================================================
+   FILE TO DATA URL
+========================================================= */
+
+function readFileAsDataURL(file){
+
+  return new Promise(
+    (resolve,reject)=>{
+
+      const reader =
+        new FileReader();
+
+      reader.onload =
+        ()=>resolve(
+          reader.result
+        );
+
+      reader.onerror =
+        reject;
+
+      reader.readAsDataURL(file);
+
+    }
+  );
+
+}
+
+/* =========================================================
+   DELETE REVIEW
+========================================================= */
+
+$('adminReviewList')
+  .addEventListener(
+    'click',
+    async event=>{
+
+      const button =
+        event.target.closest(
+          '[data-delete-review]'
+        );
+
+      if(!button) return;
+
+      const index =
+        Number(
+          button.dataset.deleteReview
+        );
+
+      if(
+        !Number.isInteger(index) ||
+        !state.reviews[index]
+      ){
+        return;
+      }
+
+      const review =
+        state.reviews[index];
+
+      const confirmed =
+        confirm(
+          'ต้องการลบรีวิวของ "' +
+          (review.name || 'ลูกค้า') +
+          '" ใช่หรือไม่?'
+        );
+
+      if(!confirmed) return;
+
+      state.reviews.splice(
+        index,
+        1
+      );
+
+      const ok =
+        await save();
+
+      render();
+
+      toast(
+        ok
+          ? 'ลบรีวิวเรียบร้อยแล้ว'
+          : 'ลบรีวิวและบันทึกไว้ในเครื่องแล้ว'
+      );
+
+    }
+  );
+
+/* =========================================================
+   CLEAR ALL REVIEWS
+========================================================= */
+
+$('clearReviewsBtn')
+  .addEventListener(
+    'click',
+    async ()=>{
+
+      if(!state.reviews.length){
+
+        toast(
+          'ยังไม่มีรีวิวให้ลบ'
+        );
+
+        return;
+
+      }
+
+      const confirmed =
+        confirm(
+          'ต้องการล้างรีวิวทั้งหมดใช่หรือไม่?'
+        );
+
+      if(!confirmed) return;
+
+      state.reviews = [];
+
+      const ok =
+        await save();
+
+      render();
+
+      toast(
+        ok
+          ? 'ล้างรีวิวทั้งหมดแล้ว'
+          : 'ล้างรีวิวในเครื่องแล้ว'
+      );
+
+    }
+  );
+
+/* =========================================================
+   REFRESH
+========================================================= */
+
+$('refreshReviewsBtn')
+  .addEventListener(
+    'click',
+    async ()=>{
+
+      const button =
+        $('refreshReviewsBtn');
+
+      const oldText =
+        button.textContent;
+
+      button.disabled = true;
+
+      button.textContent =
+        'กำลังโหลด...';
+
+      const ok =
+        await loadFirebase();
+
+      render();
+
+      button.disabled = false;
+
+      button.textContent =
+        oldText;
+
+      toast(
+        ok
+          ? 'รีเฟรชข้อมูลแล้ว ♡'
+          : 'ไม่สามารถเชื่อมต่อ Firebase ได้'
+      );
+
+    }
+  );
+
+/* =========================================================
+   TOAST
+========================================================= */
+
+let toastTimer = null;
+
+function toast(message){
+
+  const element =
+    $('toast');
+
+  element.textContent =
+    message;
+
+  element.classList.add(
+    'show'
+  );
+
+  clearTimeout(
+    toastTimer
+  );
+
+  toastTimer =
+    setTimeout(
+      ()=>{
+        element.classList.remove(
+          'show'
+        );
+      },
+      2600
+    );
+
+}
+
+/* =========================================================
+   ESC KEY
+========================================================= */
+
+document.addEventListener(
+  'keydown',
+  event=>{
+
+    if(event.key !== 'Escape'){
+      return;
+    }
+
+    document
+      .querySelectorAll(
+        '.modal:not(.hidden)'
+      )
+      .forEach(modal=>{
+
+        closeModal(
+          modal.id
+        );
+
+      });
+
+  }
+);
+  <script>
+/* =========================================================
+   INITIAL LOAD
+========================================================= */
+
+async function load(){
+
+  /*
+    1. แสดงค่า default/local ก่อน
+       เพื่อให้หน้าเว็บไม่ต้องรอ Firebase
+  */
+
+  loadLocal();
+
+  render();
+
+  /*
+    2. จากนั้นดึงข้อมูลล่าสุดจาก Firebase
+  */
+
+  const loaded =
+    await loadFirebase();
+
+  if(loaded){
+
+    render();
+
+  }
+
+}
+
+/* =========================================================
+   START
+========================================================= */
+
+load();
+
+</script>
+
+</body>
+</html>
